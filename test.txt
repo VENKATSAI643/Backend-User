@@ -1,0 +1,68 @@
+mutation {
+  followUser(userId: "671b4309cdd156b1a0d83b3d", followId: "671b4309cdd156b1a0d83b3c") {
+    id
+    username
+    following {
+      id
+      username
+    }
+    followers {
+      id
+      username
+    }
+  }
+}
+
+
+query {
+  getUser(id: "671b4309cdd156b1a0d83b3d") {
+    id
+    username
+    email
+    bio
+    avatar
+    isPrivate
+    followers {
+      id
+      username
+    }
+    following {
+      id
+      username
+    }
+  }
+}
+
+
+
+
+mutation {
+  editProfile(id: "671b4309cdd156b1a0d83b3d", bio: "This is my new bio", avatar: "http://new-avatar.com/image.jpg", isPrivate: false) {
+    id
+    username
+    bio
+    avatar
+    isPrivate
+  }
+}
+
+
+
+
+mutation {
+  unfollowUser(userId: "671b49c11c251cc01e7b8541", unfollowId: "671b4309cdd156b1a0d83b3c") {
+    id
+    username
+    following {
+      id
+      username
+    }
+    followers {
+      id
+      username
+    }
+  }
+}
+
+
+
